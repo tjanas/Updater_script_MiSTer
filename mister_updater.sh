@@ -479,12 +479,12 @@ then
 		fi
 		if [ "${INI_DATETIME_UTC}" != "${LAST_SUCCESSFUL_RUN_INI_DATETIME_UTC}" ]
 		then
-			echo "${INI_PATH} was modified"
+			echo "${INI_PATH} was modified; INI_DATETIME_UTC:${INI_DATETIME_UTC} != LAST_SUCCESSFUL_RUN_INI_DATETIME_UTC:${LAST_SUCCESSFUL_RUN_INI_DATETIME_UTC}"
 		fi
 		echo ""
 	fi
 else
-	echo "Performing a full updater resync"
+	echo "Performing a full updater resync because ${LAST_SUCCESSFUL_RUN_PATH} does not exist"
 	echo ""
 fi
 
